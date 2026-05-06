@@ -1,0 +1,5 @@
+In Python you can work with list.
+In Python you can work with functions and classes.
+In Python you can read the txt files.
+In Python you can use cycles.
+In Python you can use standard libraries and also a community libraries.
