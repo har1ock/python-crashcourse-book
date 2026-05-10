@@ -13,27 +13,26 @@ class RandomWalk:
 
     def fill_walk(self):
         """Обчислити всі точки блукання."""
-
         # Продовжувати робити кроки, доки блукання не досягне
         # необхідної довжини
         while len(self.x_values) < self.num_points:
-
-            # Вирішити, в якому напрямку рухатися та як довго 
-            x_direction = choice([1, -1])
-            x_distance = choice([0, 1, 2, 3, 4])
-            x_step = x_direction * x_distance
-
-            y_direction = choice([1, -1])
-            y_distance = choice([0, 1, 2, 3, 4])
-            y_step = y_direction * y_distance
+            x_step = self.get_step()
+            y_step = self.get_step()
 
             # Відкинути кроки які нікуди не просуваються
-            if x_step == 0 and y_step == 0:
+            if x_step  == 0 and y_step == 0:
                 continue
 
             # Розрахувати нову позицію
             x = self.x_values[-1] + x_step
             y = self.y_values[-1] + y_step
-
+                    
             self.x_values.append(x)
             self.y_values.append(y)
+
+    def get_step(self):
+        # Вирішити, в якому напрямку рухатися та як довго 
+        step_direction = choice([1, -1])
+        step_distance = choice([0, 1, 2, 3, 4])
+        step = step_direction * step_distance
+        return step
