@@ -5,7 +5,7 @@ y_values = [x**3 for x in x_values]
 
 plt.style.use('seaborn-v0_8-whitegrid')
 fig, ax = plt.subplots()
-ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.OrRd, s=5)
+ax.scatter(x_values, y_values, c=y_values, cmap='OrRd', s=5)
 
 
 ax.set_title("Cube numbers", fontsize=24)
@@ -14,5 +14,5 @@ ax.set_ylabel("Cube of Value", fontsize=14)
 
 ax.tick_params(axis='both', which='major', labelsize=14)
 
-ax.axis([0, 5500, 0, 130_000_000_000 ])
+ax.axis((0, 5500, 0, 130_000_000_000 ))
 plt.show()

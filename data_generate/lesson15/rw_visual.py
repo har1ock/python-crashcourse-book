@@ -12,7 +12,7 @@ while True:
     fig, ax = plt.subplots(figsize=(15, 9))
     point_numbers = range(rw.num_points)
     ax.scatter(rw.x_values, rw.y_values, c=point_numbers,
-               cmap=plt.cm.Blues, edgecolors='none', s=1)
+               cmap='Blues', edgecolors='none', s=1)
 
     # Виокремити першу та останю точки.
     ax.scatter(0, 0, c='green', edgecolors='none', s=100)
