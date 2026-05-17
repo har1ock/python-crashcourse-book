@@ -11,3 +11,4 @@ response_dict = r.json()
 readeble_file = 'data_generate/lesson17/readeble_hn_data.json'
 with open(readeble_file, 'w') as f:
     json.dump(response_dict, f, indent=4)
+    
